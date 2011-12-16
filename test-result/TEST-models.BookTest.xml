@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.001" errors="0" skipped="0" tests="2" name="models.BookTest">
+  <testcase classname="models.BookTest" name="shouldCreateBookObject" time="0">
+      </testcase>
+  <testcase classname="models.BookTest" name="shouldNotCreateObjectWithNullOrEmptyValue" time="0.001">
+      </testcase>
+</testsuite>

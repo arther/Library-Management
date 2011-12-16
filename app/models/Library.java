@@ -12,9 +12,11 @@ public class Library extends Model {
 
 	}
 
-	public void addItem(Item item) {
+	public boolean addItem(Item item) {
+		if(item == null) return false;
 		item.save();
 		new ItemRegistry().save();
+		return true;
 	}
 
 	public List getItemList() {
@@ -24,6 +26,8 @@ public class Library extends Model {
 	}
 
 	public List findItemByCreator(String creator) {
+		if (creator == null || creator.isEmpty())
+			return null;
 		Query query = JPA
 				.em()
 				.createNativeQuery(

@@ -25,8 +25,9 @@ public class LibraryTest extends UnitTest{
 	@Test
 	public void shouldAddItem(){
 		Item item = new Book("Ansi c","Samy");
-		library.addItem(item);
+		assertTrue(library.addItem(item));
 		assertEquals(1,library.getItemList().size());
+		assertFalse(library.addItem(null));
 	}
 	
 	@Test
@@ -34,5 +35,11 @@ public class LibraryTest extends UnitTest{
 		
 		library.addItem(new Book("Head First Java","Kenth"));
 		assertEquals(1,library.findItemByCreator("Kenth").size());
+	}
+	
+	@Test
+	public void shouldReturnNullForFindItemByCreatorWithEmptyOrNullParameter(){
+		assertNull(library.findItemByCreator(""));
+		assertNull(library.findItemByCreator(null));
 	}
 }

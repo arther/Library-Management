@@ -4,7 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class BookTest {
+import play.test.UnitTest;
+
+public class BookTest extends UnitTest{
 
 	@Test
 	public void shouldCreateBookObject(){
@@ -14,5 +16,9 @@ public class BookTest {
 	@Test(expected=RuntimeException.class)
 	public void shouldNotCreateObjectWithNullOrEmptyValue(){
 		new Book(null,null);
+		new Book("","xxx");
+		new Book("xxx","");
+		new Book("xx",null);
+		new Book(null,"xxx;");
 	}
 }
