@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="1" time="0.014" errors="0" skipped="0" tests="1" name="models.LibraryTest">
-  <testcase classname="models.LibraryTest" name="shouldCreateLibraryObject" time="0">
+<testsuite failures="0" time="0.02" errors="0" skipped="0" tests="6" name="models.LibraryTest">
+  <testcase classname="models.LibraryTest" name="shouldCreateLibraryObject" time="0.003">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.014">
-                  <failure type="" message="Failure, expected:&lt;1&gt; but was:&lt;4&gt;">
-        <![CDATA[
-          In /test/models/LibraryTest.java, line 27
-          
-              		assertEquals(1,library.getItemList().size()); :
-          
-        ]]>
-        </failure>
-        }
-                  </testcase>
+  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.005">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldIssueItem" time="0.003">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldReturnItem" time="0.003">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldDeleteAItem" time="0.003">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldReserveABook" time="0.003">
+      </testcase>
 </testsuite>

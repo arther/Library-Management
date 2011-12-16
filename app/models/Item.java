@@ -15,4 +15,13 @@ public class Item extends Model{
 		this.title = title;
 		this.creator = creator;
 	}
+	public boolean getIssuedStatus() {
+		ItemRegistry itemRegistry =ItemRegistry.findById(this.getId());
+		return itemRegistry.getIssuedStatus();
+	}
+	
+	public boolean getReservedStatus() {
+		ItemRegistry itemRegistry =ItemRegistry.findById(this.getId());
+		return itemRegistry.getReservedStatus();
+	}
 }

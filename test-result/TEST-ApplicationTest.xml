@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<<<<<<< HEAD
-<testsuite failures="0" time="0.445" errors="0" skipped="0" tests="1" name="ApplicationTest">
-  <testcase classname="ApplicationTest" name="testThatIndexPageWorks" time="0.445">
-=======
-<testsuite failures="0" time="0.117" errors="0" skipped="0" tests="1" name="ApplicationTest">
-  <testcase classname="ApplicationTest" name="testThatIndexPageWorks" time="0.117">
->>>>>>> 32327211bd6f685390f7716912d47f58b754bccb
+<testsuite failures="0" time="0.096" errors="0" skipped="0" tests="1" name="ApplicationTest">
+  <testcase classname="ApplicationTest" name="testThatIndexPageWorks" time="0.096">
       </testcase>
 </testsuite>
