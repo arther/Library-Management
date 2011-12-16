@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 16 Dec 2011 14:59:46,660 INFO  ~ Starting C:\Users\shobanam\Library-Management
 16 Dec 2011 14:59:47,068 WARN  ~ You're running Play! in DEV mode
 16 Dec 2011 14:59:47,138 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
@@ -21,3 +22,10 @@ play.exceptions.CompilationException: sample.domain.ItemShelf cannot be resolved
 	at Invocation.HTTP Request(Play!)
 16 Dec 2011 15:00:22,491 INFO  ~ Connected to jdbc:mysql://localhost/library?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
 16 Dec 2011 15:00:23,173 INFO  ~ Application 'Library-Management' is now started !
+=======
+16 Dec 2011 15:17:38,802 INFO  ~ Starting E:\Work space\Library-Management
+16 Dec 2011 15:17:39,195 WARN  ~ You're running Play! in DEV mode
+16 Dec 2011 15:17:39,258 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16 Dec 2011 15:17:43,745 INFO  ~ Connected to jdbc:mysql://localhost/library?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+16 Dec 2011 15:17:44,325 INFO  ~ Application 'Library-Management' is now started !
+>>>>>>> 8797756c6e6d809bd015004179d430f75db2ded6

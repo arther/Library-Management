@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+<<<<<<< HEAD
 <testsuite failures="0" time="0.004" errors="0" skipped="0" tests="3" name="models.LibraryTest">
   <testcase classname="models.LibraryTest" name="shouldCreateLibraryObject" time="0">
       </testcase>
@@ -7,4 +8,13 @@
       </testcase>
   <testcase classname="models.LibraryTest" name="shouldGetBooklistWhichContainsBookTitle" time="0.002">
       </testcase>
+=======
+<testsuite failures="0" time="0.071" errors="0" skipped="0" tests="3" name="models.LibraryTest">
+  <testcase classname="models.LibraryTest" name="shouldCreateLibraryObject" time="0.003">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.063">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldFindItemByCreator" time="0.005">
+      </testcase>
+>>>>>>> 8797756c6e6d809bd015004179d430f75db2ded6
 </testsuite>
