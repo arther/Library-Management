@@ -20,8 +20,6 @@ public class Library extends Model {
 	public List getItemList() {
 		Query query = JPA.em().createNativeQuery(
 				"select * from item i, itemregistry ir where i.id = ir.id");
-<<<<<<< HEAD
-=======
 		return query.getResultList();
 	}
 
@@ -39,7 +37,6 @@ public class Library extends Model {
 		Query query = null;
 		if(((title==null)||(title.isEmpty()))) return null;
 		query = JPA.em().createNativeQuery("select * from item i, itemregistry ir where i.id = ir.id and i.title LIKE '%"+title+"%'");
->>>>>>> 7c4d6dba3a3482d36b0c62f69f8411b05d785835
 		return query.getResultList();
 	}
 

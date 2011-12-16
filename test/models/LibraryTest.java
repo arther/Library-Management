@@ -39,7 +39,6 @@ public class LibraryTest extends UnitTest{
 		library.deleteItem(item);
 	}
 	@Test
-<<<<<<< HEAD
 	public void shouldIssueItem(){
 		Library library = new Library();
 		Item item = new Book("Ansi c","Samy");
@@ -69,7 +68,6 @@ public class LibraryTest extends UnitTest{
 		library.deleteItem(item);
 	}
 	
-=======
 	public void shouldGetBooklistWhichContainsBookTitle() {
 		Library library = new Library();
 		Item item = new Book("c++","bala");
@@ -84,5 +82,4 @@ public class LibraryTest extends UnitTest{
 		library.addItem(new Book("Head First Java","Kenth"));
 		assertEquals(1,library.findItemByCreator("Kenth").size());
 	}
->>>>>>> 7c4d6dba3a3482d36b0c62f69f8411b05d785835
 }
