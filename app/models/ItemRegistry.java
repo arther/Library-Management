@@ -1,6 +1,12 @@
 package models;
 
-public class ItemRegistry {
+import play.*;
+import play.db.jpa.*;
+import javax.persistence.*;
+import java.util.*;
+
+@Entity
+public class ItemRegistry extends Model{
 	
 	private boolean isAvailable;
 	private boolean isReserved;
