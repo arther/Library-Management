@@ -1,10 +1,5 @@
-16 Dec 2011 14:00:02,937 INFO  ~ Starting E:\Work space\Library-Management
-16 Dec 2011 14:00:03,332 WARN  ~ You're running Play! in DEV mode
-16 Dec 2011 14:00:03,396 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-16 Dec 2011 14:00:06,503 INFO  ~ Connected to jdbc:mysql://localhost/library?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
-16 Dec 2011 14:00:07,082 INFO  ~ Application 'Library-Management' is now started !
-16 Dec 2011 14:02:17,672 ERROR ~ line 1:8: unexpected token: *
-16 Dec 2011 14:03:22,341 ERROR ~ line 1:8: unexpected token: *
-16 Dec 2011 14:09:12,824 ERROR ~ line 1:8: unexpected token: *
-16 Dec 2011 14:25:47,097 WARN  ~ SQL Error: 1054, SQLState: 42S22
-16 Dec 2011 14:25:47,098 ERROR ~ Unknown column 'i' in 'field list'
+16 Dec 2011 15:17:38,802 INFO  ~ Starting E:\Work space\Library-Management
+16 Dec 2011 15:17:39,195 WARN  ~ You're running Play! in DEV mode
+16 Dec 2011 15:17:39,258 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16 Dec 2011 15:17:43,745 INFO  ~ Connected to jdbc:mysql://localhost/library?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+16 Dec 2011 15:17:44,325 INFO  ~ Application 'Library-Management' is now started !
