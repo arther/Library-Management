@@ -26,4 +26,13 @@ public class LibraryTest extends UnitTest{
 		library.addItem(item);
 		assertEquals(1,library.getItemList().size());
 	}
+	@Test
+	public void shouldGetBooklistWhichContainsBookTitle() {
+		Library library = new Library();
+		Item item = new Book("c++","bala");
+		library.addItem(item);
+		assertEquals(2, library.getItemsByTitle("c").size());
+		assertNull(library.getItemsByTitle(""));
+		assertNull(library.getItemsByTitle(null));
+	}
 }

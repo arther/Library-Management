@@ -1,10 +1,23 @@
-16 Dec 2011 14:00:02,937 INFO  ~ Starting E:\Work space\Library-Management
-16 Dec 2011 14:00:03,332 WARN  ~ You're running Play! in DEV mode
-16 Dec 2011 14:00:03,396 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-16 Dec 2011 14:00:06,503 INFO  ~ Connected to jdbc:mysql://localhost/library?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
-16 Dec 2011 14:00:07,082 INFO  ~ Application 'Library-Management' is now started !
-16 Dec 2011 14:02:17,672 ERROR ~ line 1:8: unexpected token: *
-16 Dec 2011 14:03:22,341 ERROR ~ line 1:8: unexpected token: *
-16 Dec 2011 14:09:12,824 ERROR ~ line 1:8: unexpected token: *
-16 Dec 2011 14:25:47,097 WARN  ~ SQL Error: 1054, SQLState: 42S22
-16 Dec 2011 14:25:47,098 ERROR ~ Unknown column 'i' in 'field list'
+16 Dec 2011 14:59:46,660 INFO  ~ Starting C:\Users\shobanam\Library-Management
+16 Dec 2011 14:59:47,068 WARN  ~ You're running Play! in DEV mode
+16 Dec 2011 14:59:47,138 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16 Dec 2011 14:59:56,163 ERROR ~ 
+
+@68m168mjl
+Internal Server Error (500) for request GET /
+
+Compilation error (In /test/models/LibraryTest.java around line 12)
+The file /test/models/LibraryTest.java could not be compiled. Error raised is : sample.domain.ItemShelf cannot be resolved
+
+play.exceptions.CompilationException: sample.domain.ItemShelf cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:424)
+	at play.Play.start(Play.java:505)
+	at play.Play.detectChanges(Play.java:629)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+16 Dec 2011 15:00:22,491 INFO  ~ Connected to jdbc:mysql://localhost/library?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+16 Dec 2011 15:00:23,173 INFO  ~ Application 'Library-Management' is now started !
