@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Test results for controllers.LibraryTest.class</title>
+        <title>Test results for models.LibraryTest.class</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <style type="text/css">
             body {
@@ -61,12 +61,12 @@
     </head>
     <body>
         
-        <div id="header" class="block success">
+        <div id="header" class="block failed">
             <h1>
-                controllers.LibraryTest.class
+                models.LibraryTest.class
             </h1>
             <p>
-                SUCCESS
+                FAILED
             </p>
         </div>
         
@@ -84,14 +84,24 @@
                     </td>
                 </tr>
                                 <tr>
-                    <td width="20%" class="passed" valign="top">
+                    <td width="20%" class="failed" valign="top">
                         <span>shouldAddItem</span>
                     </td>
-                    <td class="" valign="top">
-                                                                        Ok
-                                            </td>
+                    <td class="error" valign="top">
+                                                <strong>Failure, expected:&lt;1&gt; but was:&lt;4&gt;</strong>
+                                                <div class="source">
+                            <span>In /test/models/LibraryTest.java, line 27 :</span>
+                        </div>
+                        <div class="sourceLine">
+                            <span>
+                                
+                                    		assertEquals(1,library.getItemList().size());
+                                
+                            </span>
+                        </div>
+                                                                                                                    </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        16 ms
+                        14 ms
                     </td>
                 </tr>
                             </table>
