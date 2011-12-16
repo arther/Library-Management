@@ -15,6 +15,10 @@
     <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="play.server.Server"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Library-Management"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -Dplay.debug=yes -Dplay.id= -Dapplication.path=&quot;${project_loc:Library-Management}&quot; -Djava.endorsed.dirs=&quot;C:\play-1.2.3/framework/endorsed&quot; -javaagent:&quot;C:\play-1.2.3/framework/play-1.2.3.jar&quot;"/>
+<<<<<<< HEAD
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -Dplay.debug=yes -Dplay.id= -Dapplication.path=&quot;${project_loc:Library-Management}&quot; -Djava.endorsed.dirs=&quot;C:\Users\priyadar\Downloads\play-1.2.4\play-1.2.4/framework/endorsed&quot; -javaagent:&quot;C:\Users\priyadar\Downloads\play-1.2.4\play-1.2.4/framework/play-1.2.4.jar&quot;"/>
+=======
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -Dplay.debug=yes -Dplay.id= -Dapplication.path=&quot;${project_loc:Library-Management}&quot; -Djava.endorsed.dirs=&quot;C:\Users\shobanam\Downloads\play-1.2.4/framework/endorsed&quot; -javaagent:&quot;C:\Users\shobanam\Downloads\play-1.2.4/framework/play-1.2.4.jar&quot;"/>
+>>>>>>> 7c4d6dba3a3482d36b0c62f69f8411b05d785835
 </launchConfiguration>
 

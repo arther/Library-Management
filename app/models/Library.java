@@ -13,7 +13,8 @@ public class Library extends Model {
 	}
 
 	public boolean addItem(Item item) {
-		if(item == null) return false;
+		if (item == null)
+			return false;
 		item.save();
 		new ItemRegistry().save();
 		return true;
@@ -36,4 +37,42 @@ public class Library extends Model {
 								+ creator + "%'");
 		return query.getResultList();
 	}
+
+	public List getItemsByTitle(String title) {
+		Query query = null;
+		if (((title == null) || (title.isEmpty())))
+			return null;
+		query = JPA.em().createNativeQuery(
+				"select * from item i, itemregistry ir where i.id = ir.id and i.title LIKE '%"
+						+ title + "%'");
+		return query.getResultList();
+	}
+
+	public void issueItem(Item item) {
+		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
+		if (!item.getIssuedStatus())
+			itemRegistry.setIssuedStatus(false);
+		itemRegistry.save();
+	}
+
+	public void returnItem(Item item) {
+		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
+		if (item.getIssuedStatus())
+			itemRegistry.setIssuedStatus(true);
+		itemRegistry.save();
+	}
+
+	public void deleteItem(Item item) {
+		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
+		item.delete();
+		itemRegistry.delete();
+	}
+
+	public void reserveItem(Item item) {
+		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
+		if (!item.getReservedStatus())
+			itemRegistry.setReservedStatus(true);
+		itemRegistry.save();
+	}
+
 }
