@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'getItemListByCreator.html' /}
+
+#{ifnot resultList}
+	No items Found.
+#{/ifnot}
+
+#{list items:resultList,as:'resultItem'}
+			<input type="label" value="${resultItem[0]}"></input>
+			<input type="label" value="${resultItem[1]}"></input>
+			<input type="label" value="${resultItem[2]}"></input>
+			#{ifnot resultItem[3]}
+				<input type="label" value="Available"></input>
+			#{/ifnot}
+			#{if resultItem[3]}
+				<input type="label" value="Issued"></input>
+			#{/if}
+			#{ifnot resultItem[4]}
+				#{if resultItem[3]}
+					<a href="">Reserve</a>
+				#{/if}
+			#{/ifnot}
+			#{if resultItem[4]}
+				<input type="label" value="Reserved"></input>
+			#{/if}
+</br>
+#{/list}

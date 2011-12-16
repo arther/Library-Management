@@ -8,20 +8,20 @@ import java.util.*;
 @Entity
 public class ItemRegistry extends Model {
 
-	private boolean isAvailable;
+	private boolean isIssued;
 	private boolean isReserved;
 
 	public ItemRegistry() {
-		isAvailable = false;
+		isIssued = false;
 		isReserved = false;
 	}
 
 	public void setIssuedStatus(boolean issuedStatus) {
-		isAvailable = issuedStatus;
+		isIssued = issuedStatus;
 	}
 
 	public boolean getIssuedStatus() {
-		return !isAvailable;
+		return isIssued;
 	}
 
 	public void setReservedStatus(boolean reservedStatus) {

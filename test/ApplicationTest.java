@@ -13,4 +13,9 @@ public class ApplicationTest extends FunctionalTest {
         assertContentType("text/html", response);
         assertCharset(play.Play.defaultWebEncoding, response);
     }
+    
+    @Test
+    public void testThatGetItemListByCreatorWorks(){
+    	Response response = GET("/getitemlistbycreator");
+    }
 }

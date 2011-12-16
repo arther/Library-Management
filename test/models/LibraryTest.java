@@ -19,7 +19,6 @@ public class LibraryTest extends UnitTest{
 	
 	@Test
 	public void shouldDeleteAItem(){
-		Library library = new Library();
 		Item item = new Book("Ansi c","Samy");
 		library.addItem(item);
 		library.deleteItem(item);
@@ -40,16 +39,15 @@ public class LibraryTest extends UnitTest{
 	}
 	@Test
 	public void shouldIssueItem(){
-		Library library = new Library();
 		Item item = new Book("Ansi c","Samy");
 		library.addItem(item);
 		library.issueItem(item);
 		assertTrue(item.getIssuedStatus());
+		library.issueItem(item);
 		library.deleteItem(item);
 			}
 	@Test
 	public void shouldReturnItem() {
-		Library library = new Library();
 		Item item = new Book("Ansi c","Samy");
 		library.addItem(item);
 		library.issueItem(item);
@@ -60,7 +58,6 @@ public class LibraryTest extends UnitTest{
 	
 	@Test
 	public void shouldReserveABook(){
-		Library library = new Library();
 		Item item = new Book("Ansi c","Samy");
 		library.addItem(item);
 		library.reserveItem(item);
@@ -69,7 +66,6 @@ public class LibraryTest extends UnitTest{
 	}
 	
 	public void shouldGetBooklistWhichContainsBookTitle() {
-		Library library = new Library();
 		Item item = new Book("c++","bala");
 		library.addItem(item);
 		assertEquals(2, library.getItemsByTitle("c").size());
@@ -80,7 +76,8 @@ public class LibraryTest extends UnitTest{
 	public void shouldFindItemByCreator(){
 		
 		library.addItem(new Book("Head First Java","Kenth"));
-		assertEquals(1,library.findItemByCreator("Kenth").size());
+		library.addItem(new Book("Head First Java","Kenth"));
+		assertEquals(2,library.findItemByCreator("Kenth").size());
 	}
 	
 	@Test
