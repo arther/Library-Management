@@ -27,4 +27,11 @@ public class LibraryTest extends UnitTest{
 		assertEquals(1,library.getItemList().size());
 		assertNotNull(item);
 	}
+//	@Test
+//	public void shouldIssueItem(){
+//		Library library = new Library();
+//		Item item = new Book("Ansi c","Samy");
+//		library.addItem(item);
+//		library.
+//	}
 }
