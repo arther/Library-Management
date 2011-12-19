@@ -6,21 +6,21 @@
 #{/ifnot}
 
 #{list items:resultList,as:'resultItem'}
-			<input type="label" value="${resultItem[0]}"></input>
-			<input type="label" value="${resultItem[1]}"></input>
-			<input type="label" value="${resultItem[2]}"></input>
-			#{ifnot resultItem[3]}
+			<input type="label" value="${resultItem["id"]}"></input>
+			<input type="label" value="${resultItem.item.title}"></input>
+			<input type="label" value="${resultItem.item.creator}"></input>
+		#{ifnot resultItem["isIssued"]}
 				<input type="label" value="Available"></input>
 			#{/ifnot}
-			#{if resultItem[3]}
+			#{if resultItem["isIssued"]}
 				<input type="label" value="Issued"></input>
 			#{/if}
-			#{ifnot resultItem[4]}
-				#{if resultItem[3]}
+			#{ifnot resultItem["isReserved"]}
+				#{if resultItem["isIssued"]}
 					<a href="">Reserve</a>
 				#{/if}
 			#{/ifnot}
-			#{if resultItem[4]}
+			#{if resultItem["isReserved"]}
 				<input type="label" value="Reserved"></input>
 			#{/if}
 </br>

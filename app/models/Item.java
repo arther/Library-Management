@@ -31,4 +31,12 @@ public class Item extends Model {
 	public static List getItemsByTitle(String title){
 		return(Item.find("byTitle",title).fetch());
 	}
+	
+	public String getTitle(){
+		return title;
+	}
+	
+	public String getCreator(){
+		return creator;
+	}
 }

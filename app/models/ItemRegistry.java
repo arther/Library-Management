@@ -10,10 +10,14 @@ public class ItemRegistry extends Model {
 
 	private boolean isIssued;
 	private boolean isReserved;
+	
+	@OneToOne
+	private Item item;
 
-	public ItemRegistry() {
+	public ItemRegistry(Item item) {
 		isIssued = false;
 		isReserved = false;
+		this.item = item;
 	}
 
 	public void setIssuedStatus(boolean issuedStatus) {
@@ -32,7 +36,11 @@ public class ItemRegistry extends Model {
 		return isReserved;
 	}
 	
-	public static ItemRegistry getItemRegistryById(long id){
-		return ItemRegistry.findById(id);
+	public static List findByCreator(String creator){
+		return ItemRegistry.find("item.creator",creator).fetch();
+	}
+	
+	public static List findByTitle(String creator){
+		return ItemRegistry.find("item.title",creator).fetch();
 	}
 }

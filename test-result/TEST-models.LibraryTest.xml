@@ -1,69 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="5" time="0.125" errors="0" skipped="0" tests="5" name="models.LibraryTest">
-  <testcase classname="models.LibraryTest" name="shouldDeleteAItem" time="0.016">
-                  <failure type="" message="Failure, expected:&lt;0&gt; but was:&lt;34&gt;">
-        <![CDATA[
-          In /test/models/LibraryTest.java, line 25
-          
-              		assertEquals(0, library.getItemList().size()); :
-          
-        ]]>
-        </failure>
-        }
-                  </testcase>
+<testsuite failures="0" time="0.05" errors="0" skipped="0" tests="8" name="models.LibraryTest">
   <testcase classname="models.LibraryTest" name="shouldCreateLibraryObject" time="0">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.015">
-                  <failure type="" message="Failure, expected:&lt;1&gt; but was:&lt;35&gt;">
-        <![CDATA[
-          In /test/models/LibraryTest.java, line 37
-          
-              		assertEquals(1,library.getItemList().size()); :
-          
-        ]]>
-        </failure>
-        }
-                  </testcase>
-  <testcase classname="models.LibraryTest" name="shouldIssueItem" time="0.016">
+  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.014">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldReturnItem" time="0.016">
+  <testcase classname="models.LibraryTest" name="shouldIssueItem" time="0.012">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldReserveABook" time="0">
+  <testcase classname="models.LibraryTest" name="shouldReturnItem" time="0.008">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldFindItemByCreator" time="0.015">
-                  <failure type="" message="Failure, expected:&lt;2&gt; but was:&lt;8&gt;">
-        <![CDATA[
-          In /test/models/LibraryTest.java, line 80
-          
-              		assertEquals(2,library.findItemByCreator("Kenth").size()); :
-          
-        ]]>
-        </failure>
-        }
-                  </testcase>
+  <testcase classname="models.LibraryTest" name="shouldReserveABook" time="0.004">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldFindItemByCreator" time="0.008">
+      </testcase>
   <testcase classname="models.LibraryTest" name="shouldReturnNullForFindItemByCreatorWithEmptyOrNullParameter" time="0">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldGetItemsByTitle" time="0.016">
-                  <failure type="" message="Failure, expected:&lt;4&gt; but was:&lt;5&gt;">
-        <![CDATA[
-          In /test/models/LibraryTest.java, line 95
-          
-              		assertEquals(4,library.getItemsByTitle("xxx").size()); :
-          
-        ]]>
-        </failure>
-        }
-                  </testcase>
-  <testcase classname="models.LibraryTest" name="shouldGetItemRegistryByItemList" time="0.031">
-                  <failure type="" message="Failure, expected:&lt;4&gt; but was:&lt;8&gt;">
-        <![CDATA[
-          In /test/models/LibraryTest.java, line 104
-          
-              		assertEquals(4,library.getItemRegistryByItemList(library.getItemsByTitle("Ansi")).size()); :
-          
-        ]]>
-        </failure>
-        }
-                  </testcase>
+  <testcase classname="models.LibraryTest" name="shouldDeleteAItem" time="0.004">
+      </testcase>
 </testsuite>

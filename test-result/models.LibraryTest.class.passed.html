@@ -61,38 +61,17 @@
     </head>
     <body>
         
-        <div id="header" class="block failed">
+        <div id="header" class="block success">
             <h1>
                 models.LibraryTest.class
             </h1>
             <p>
-                FAILED
+                SUCCESS
             </p>
         </div>
         
         <div id="results">
             <table>
-                                <tr>
-                    <td width="20%" class="failed" valign="top">
-                        <span>shouldDeleteAItem</span>
-                    </td>
-                    <td class="error" valign="top">
-                                                <strong>Failure, expected:&lt;0&gt; but was:&lt;34&gt;</strong>
-                                                <div class="source">
-                            <span>In /test/models/LibraryTest.java, line 25 :</span>
-                        </div>
-                        <div class="sourceLine">
-                            <span>
-                                
-                                    		assertEquals(0, library.getItemList().size());
-                                
-                            </span>
-                        </div>
-                                                                                                                    </td>
-                    <td width="5%" align="right" class="time" valign="top">
-                        16 ms
-                    </td>
-                </tr>
                                 <tr>
                     <td width="20%" class="passed" valign="top">
                         <span>shouldCreateLibraryObject</span>
@@ -105,24 +84,14 @@
                     </td>
                 </tr>
                                 <tr>
-                    <td width="20%" class="failed" valign="top">
+                    <td width="20%" class="passed" valign="top">
                         <span>shouldAddItem</span>
                     </td>
-                    <td class="error" valign="top">
-                                                <strong>Failure, expected:&lt;1&gt; but was:&lt;35&gt;</strong>
-                                                <div class="source">
-                            <span>In /test/models/LibraryTest.java, line 37 :</span>
-                        </div>
-                        <div class="sourceLine">
-                            <span>
-                                
-                                    		assertEquals(1,library.getItemList().size());
-                                
-                            </span>
-                        </div>
-                                                                                                                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        15 ms
+                        14 ms
                     </td>
                 </tr>
                                 <tr>
@@ -133,7 +102,7 @@
                                                                         Ok
                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        16 ms
+                        12 ms
                     </td>
                 </tr>
                                 <tr>
@@ -144,7 +113,7 @@
                                                                         Ok
                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        16 ms
+                        8 ms
                     </td>
                 </tr>
                                 <tr>
@@ -155,28 +124,18 @@
                                                                         Ok
                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        0 ms
+                        4 ms
                     </td>
                 </tr>
                                 <tr>
-                    <td width="20%" class="failed" valign="top">
+                    <td width="20%" class="passed" valign="top">
                         <span>shouldFindItemByCreator</span>
                     </td>
-                    <td class="error" valign="top">
-                                                <strong>Failure, expected:&lt;2&gt; but was:&lt;8&gt;</strong>
-                                                <div class="source">
-                            <span>In /test/models/LibraryTest.java, line 80 :</span>
-                        </div>
-                        <div class="sourceLine">
-                            <span>
-                                
-                                    		assertEquals(2,library.findItemByCreator(&quot;Kenth&quot;).size());
-                                
-                            </span>
-                        </div>
-                                                                                                                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        15 ms
+                        8 ms
                     </td>
                 </tr>
                                 <tr>
@@ -191,45 +150,14 @@
                     </td>
                 </tr>
                                 <tr>
-                    <td width="20%" class="failed" valign="top">
-                        <span>shouldGetItemsByTitle</span>
+                    <td width="20%" class="passed" valign="top">
+                        <span>shouldDeleteAItem</span>
                     </td>
-                    <td class="error" valign="top">
-                                                <strong>Failure, expected:&lt;4&gt; but was:&lt;5&gt;</strong>
-                                                <div class="source">
-                            <span>In /test/models/LibraryTest.java, line 95 :</span>
-                        </div>
-                        <div class="sourceLine">
-                            <span>
-                                
-                                    		assertEquals(4,library.getItemsByTitle(&quot;xxx&quot;).size());
-                                
-                            </span>
-                        </div>
-                                                                                                                    </td>
+                    <td class="" valign="top">
+                                                                        Ok
+                                            </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        16 ms
-                    </td>
-                </tr>
-                                <tr>
-                    <td width="20%" class="failed" valign="top">
-                        <span>shouldGetItemRegistryByItemList</span>
-                    </td>
-                    <td class="error" valign="top">
-                                                <strong>Failure, expected:&lt;4&gt; but was:&lt;8&gt;</strong>
-                                                <div class="source">
-                            <span>In /test/models/LibraryTest.java, line 104 :</span>
-                        </div>
-                        <div class="sourceLine">
-                            <span>
-                                
-                                    		assertEquals(4,library.getItemRegistryByItemList(library.getItemsByTitle(&quot;Ansi&quot;)).size());
-                                
-                            </span>
-                        </div>
-                                                                                                                    </td>
-                    <td width="5%" align="right" class="time" valign="top">
-                        31 ms
+                        4 ms
                     </td>
                 </tr>
                             </table>
