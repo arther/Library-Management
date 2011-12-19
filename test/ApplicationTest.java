@@ -15,7 +15,14 @@ public class ApplicationTest extends FunctionalTest {
     }
     
     @Test
+    public void testThatGetCreatorForSearchWorks(){
+    	Response response = GET("/getcreatorforsearch");
+    	assertIsOk(response);
+    }
+    
+    @Test
     public void testThatGetItemListByCreatorWorks(){
     	Response response = GET("/getitemlistbycreator");
+    	assertIsOk(response);
     }
 }

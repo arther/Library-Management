@@ -1,7 +1,4 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:'index.html' /}
 
-<form action="@{Application.getItemListByCreator()}" method="Get">
-	<input type="text" name="creator"/>
-	<input type="submit" name="submit" value="Click here"/>
-</form>
+<a href="@{Application.getCreatorForSearch()}">Get Item List Using Creator</a>
