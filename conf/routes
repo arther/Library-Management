@@ -4,7 +4,12 @@
 
 # Home page
 GET     /                                       Application.index
+<<<<<<< HEAD
 GET 	/AddItem								Application.addItem
+=======
+GET 	/getitemlistbycreator					Application.getItemListByCreator
+GET 	/getcreatorforsearch					Application.getCreatorForSearch
+>>>>>>> f31ad4d916d697f57afbb534ec92e03ebc587584
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

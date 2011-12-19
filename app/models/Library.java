@@ -32,7 +32,7 @@ public class Library extends Model {
 		Query query = JPA
 				.em()
 				.createNativeQuery(
-						"select i.id, i.title, i.creator, ir.isavailable, ir.isreserved"
+						"select i.id, i.title, i.creator, ir.isissued, ir.isreserved"
 								+ " from item i, itemregistry ir where i.id=ir.id and i.creator like '%"
 								+ creator + "%'");
 		return query.getResultList();
@@ -51,14 +51,13 @@ public class Library extends Model {
 	public void issueItem(Item item) {
 		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
 		if (!item.getIssuedStatus())
-			itemRegistry.setIssuedStatus(false);
+			itemRegistry.setIssuedStatus(true);
 		itemRegistry.save();
 	}
 
 	public void returnItem(Item item) {
 		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
-		if (item.getIssuedStatus())
-			itemRegistry.setIssuedStatus(true);
+		itemRegistry.setIssuedStatus(false);
 		itemRegistry.save();
 	}
 

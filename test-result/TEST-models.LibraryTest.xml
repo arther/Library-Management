@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="1" time="0.082" errors="0" skipped="0" tests="7" name="models.LibraryTest">
-  <testcase classname="models.LibraryTest" name="shouldCreateLibraryObject" time="0.001">
+<testsuite failures="0" time="0.113" errors="0" skipped="0" tests="8" name="models.LibraryTest">
+  <testcase classname="models.LibraryTest" name="shouldDeleteAItem" time="0.086">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.011">
+  <testcase classname="models.LibraryTest" name="shouldCreateLibraryObject" time="0">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldFindItemByCreator" time="0.008">
+  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.007">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldReturnNullForFindItemByCreatorWithEmptyOrNullParameter" time="0">
-      </testcase>
-  <testcase classname="models.LibraryTest" name="shouldDeleteAItem" time="0.037">
-                  <failure type="" message="Failure, expected:&lt;0&gt; but was:&lt;2&gt;">
-        <![CDATA[
-          In /test/models/LibraryTest.java, line 26
-          
-              		assertEquals(0, library.getItemList().size()); :
-          
-        ]]>
-        </failure>
-        }
-                  </testcase>
   <testcase classname="models.LibraryTest" name="shouldIssueItem" time="0.007">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldReturnItem" time="0.011">
+  <testcase classname="models.LibraryTest" name="shouldReturnItem" time="0.005">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldReserveABook" time="0.007">
+  <testcase classname="models.LibraryTest" name="shouldReserveABook" time="0.004">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldFindItemByCreator" time="0.004">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldReturnNullForFindItemByCreatorWithEmptyOrNullParameter" time="0">
       </testcase>
 </testsuite>

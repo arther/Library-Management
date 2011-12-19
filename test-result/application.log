@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 16 Dec 2011 16:55:50,469 INFO  ~ Starting C:\Users\Sowmyas\Library-Management
 16 Dec 2011 16:55:50,884 WARN  ~ You're running Play! in DEV mode
 16 Dec 2011 16:55:50,951 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
 16 Dec 2011 16:55:59,705 INFO  ~ Connected to jdbc:mysql://localhost/library?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
 16 Dec 2011 16:56:00,389 INFO  ~ Application 'Library-Management' is now started !
+=======
+19 Dec 2011 11:23:59,644 INFO  ~ Starting e:\Work space\Library-Management
+19 Dec 2011 11:24:00,031 WARN  ~ You're running Play! in DEV mode
+19 Dec 2011 11:24:00,100 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+19 Dec 2011 11:24:24,811 INFO  ~ Connected to jdbc:mysql://localhost/library?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+19 Dec 2011 11:24:25,353 INFO  ~ Application 'Library-Management' is now started !
+>>>>>>> f31ad4d916d697f57afbb534ec92e03ebc587584
