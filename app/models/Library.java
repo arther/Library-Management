@@ -43,7 +43,7 @@ public class Library extends Model {
 		if (((title == null) || (title.isEmpty())))
 			return null;
 		query = JPA.em().createNativeQuery(
-				"select * from item i, itemregistry ir where i.id = ir.id and i.title LIKE '%"
+				"select i.id, i.title, i.creator, ir.isavailable, ir.isreserved from item i, itemregistry ir where i.id = ir.id and i.title LIKE '%"
 						+ title + "%'");
 		return query.getResultList();
 	}
@@ -73,6 +73,13 @@ public class Library extends Model {
 		if (!item.getReservedStatus())
 			itemRegistry.setReservedStatus(true);
 		itemRegistry.save();
+	}
+	
+	public Item getItemById(String itemId){
+		if (((itemId == null) || (itemId.isEmpty())))
+			return null;
+		return(Item.findById(Long.parseLong(itemId)));
+		
 	}
 
 }

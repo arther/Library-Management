@@ -1,0 +1,8 @@
+#{extends 'main.html'/}
+#{set title :'addItemToLibrary'/}
+
+<form method="post" action="@{Application.getItemsByCreatorResult()}">
+	<input type="label" value="Enter the  author :"/>
+	<input type="text" name="creator"/>
+	<input type="submit"  value="SEARCH"/>
+</form>	

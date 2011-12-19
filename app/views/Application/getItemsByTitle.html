@@ -1,0 +1,8 @@
+#{extends 'main.html'/}
+#{set title:'getItemsByTitle'/}
+
+<form method="post" action="@{Application.getItemsByTitleResult()}">
+	<input type="label" value="Enter the title :"/>
+	<input type="text" name="title"/>
+	<input type="submit"  value="SEARCH"/>
+</form>

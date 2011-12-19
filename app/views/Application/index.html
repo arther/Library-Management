@@ -1,4 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
-
-#{welcome /}
+<ul>
+<li><a href="@{Application.addItem()}">Add Item</a></li>
+<li><a href="@{Application.getItemsByTitle()}">Search Item By Title</a></li>
+<li><a href="@{Application.getItemsByCreator()}">Search Item By Creator</a></li>
+<li><a href="@{Application.issueItem()}">Issue Item</a><li>
+</ul>
