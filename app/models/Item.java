@@ -27,4 +27,8 @@ public class Item extends Model {
 		ItemRegistry itemRegistry =ItemRegistry.findById(this.getId());
 		return itemRegistry.getReservedStatus();
 	}
+	
+	public static List getItemsByTitle(String title){
+		return(Item.find("byTitle",title).fetch());
+	}
 }

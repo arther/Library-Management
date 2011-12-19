@@ -1,6 +1,6 @@
 package models;
 
-import java.util.List;
+import java.util.*;
 
 import javax.persistence.Query;
 
@@ -42,12 +42,19 @@ public class Library extends Model {
 		Query query = null;
 		if (((title == null) || (title.isEmpty())))
 			return null;
-		query = JPA.em().createNativeQuery(
-				"select * from item i, itemregistry ir where i.id = ir.id and i.title LIKE '%"
-						+ title + "%'");
-		return query.getResultList();
+		return Item.getItemsByTitle(title);
 	}
 
+	public List getItemRegistryByItemList(List items){
+		List resultItemRegistry = new ArrayList<ItemRegistry>();
+		Item temp;
+		for(Object item:items){
+			temp = (Item)item;
+			resultItemRegistry.add(ItemRegistry.getItemRegistryById(temp.getId()));
+		}
+		return resultItemRegistry;
+	}
+	
 	public void issueItem(Item item) {
 		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
 		if (!item.getIssuedStatus())

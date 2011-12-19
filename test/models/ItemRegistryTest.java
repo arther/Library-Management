@@ -11,4 +11,12 @@ public class ItemRegistryTest extends UnitTest{
 	public void shouldCreateObject(){
 		assertNotNull(new ItemRegistry());
 	}
+	
+	@Test
+	public void shouldGetItemRegistryById(){
+		Library library = new Library();
+		library.addItem(new Book("xxx","yyy"));
+		assertNotNull(ItemRegistry.getItemRegistryById((long)1));
+		assertEquals(1,Long.parseLong(ItemRegistry.getItemRegistryById((long)1).getId().toString()));
+	}
 }

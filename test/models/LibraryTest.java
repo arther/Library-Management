@@ -85,4 +85,22 @@ public class LibraryTest extends UnitTest{
 		assertNull(library.findItemByCreator(""));
 		assertNull(library.findItemByCreator(null));
 	}
+	
+	@Test
+	public void shouldGetItemsByTitle(){
+		library.addItem(new Book("xxx","Samy"));
+		library.addItem(new Book("xxx","Samy"));
+		library.addItem(new Book("xxx","Samy"));
+		library.addItem(new Book("xxx","Samy"));
+		assertEquals(4,library.getItemsByTitle("xxx").size());
+	}
+	
+	@Test
+	public void shouldGetItemRegistryByItemList(){
+		library.addItem(new Book("Ansi","Samy"));
+		library.addItem(new Book("Ansi","Samy"));
+		library.addItem(new Book("Ansi","Samy"));
+		library.addItem(new Book("Ansi","Samy"));
+		assertEquals(4,library.getItemRegistryByItemList(library.getItemsByTitle("Ansi")).size());
+	}
 }

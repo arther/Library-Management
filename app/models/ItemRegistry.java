@@ -31,4 +31,8 @@ public class ItemRegistry extends Model {
 	public boolean getReservedStatus() {
 		return isReserved;
 	}
+	
+	public static ItemRegistry getItemRegistryById(long id){
+		return ItemRegistry.findById(id);
+	}
 }
