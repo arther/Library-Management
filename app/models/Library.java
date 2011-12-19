@@ -1,6 +1,6 @@
 package models;
 
-import java.util.List;
+import java.util.*;
 
 import javax.persistence.Query;
 
@@ -16,36 +16,27 @@ public class Library extends Model {
 		if (item == null)
 			return false;
 		item.save();
-		new ItemRegistry().save();
+		new ItemRegistry(item).save();
 		return true;
-	}
-
-	public List getItemList() {
-		Query query = JPA.em().createNativeQuery(
-				"select * from item i, itemregistry ir where i.id = ir.id");
-		return query.getResultList();
 	}
 
 	public List findItemByCreator(String creator) {
 		if (creator == null || creator.isEmpty())
 			return null;
-		Query query = JPA
-				.em()
-				.createNativeQuery(
-						"select i.id, i.title, i.creator, ir.isissued, ir.isreserved"
-								+ " from item i, itemregistry ir where i.id=ir.id and i.creator like '%"
-								+ creator + "%'");
-		return query.getResultList();
+		return ItemRegistry.findByCreator(creator);
 	}
 
 	public List getItemsByTitle(String title) {
-		Query query = null;
 		if (((title == null) || (title.isEmpty())))
 			return null;
+<<<<<<< HEAD
 		query = JPA.em().createNativeQuery(
 				"select i.id, i.title, i.creator, ir.isavailable, ir.isreserved from item i, itemregistry ir where i.id = ir.id and i.title LIKE '%"
 						+ title + "%'");
 		return query.getResultList();
+=======
+		return ItemRegistry.findByTitle(title);
+>>>>>>> c547fbe0cac5a34160c69a9515c784062b0a5ab9
 	}
 
 	public void issueItem(Item item) {
@@ -63,8 +54,8 @@ public class Library extends Model {
 
 	public void deleteItem(Item item) {
 		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
-		item.delete();
 		itemRegistry.delete();
+		item.delete();
 	}
 
 	public void reserveItem(Item item) {

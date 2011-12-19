@@ -31,6 +31,7 @@ public class Item extends Model {
 		ItemRegistry itemRegistry = ItemRegistry.findById(this.getId());
 		return itemRegistry.getReservedStatus();
 	}
+<<<<<<< HEAD
 
 	public static List getItemsByTitle(String title) {
 		Query query = null;
@@ -49,5 +50,18 @@ public class Item extends Model {
 				"select id, title, creator from item  where i.creator like '%"
 						+ creator + "%'");
 		return query.getResultList();
+=======
+	
+	public static List getItemsByTitle(String title){
+		return(Item.find("byTitle",title).fetch());
+	}
+	
+	public String getTitle(){
+		return title;
+	}
+	
+	public String getCreator(){
+		return creator;
+>>>>>>> c547fbe0cac5a34160c69a9515c784062b0a5ab9
 	}
 }

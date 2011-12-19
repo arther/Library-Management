@@ -15,16 +15,9 @@ import play.test.UnitTest;
 
 public class LibraryTest extends UnitTest{
 	
+	
 	Library library = new Library();
-	
-	@Test
-	public void shouldDeleteAItem(){
-		Item item = new Book("Ansi c","Samy");
-		library.addItem(item);
-		library.deleteItem(item);
-		assertEquals(0, library.getItemList().size());
-	}
-	
+    
 	@Test
 	public void shouldCreateLibraryObject() {
 		assertNotNull(library);
@@ -34,9 +27,10 @@ public class LibraryTest extends UnitTest{
 	public void shouldAddItem(){
 		Item item = new Book("Ansi c","Samy");
 		assertTrue(library.addItem(item));
-		assertEquals(1,library.getItemList().size());
+		assertEquals(1,Item.findAll().size());
 		assertFalse(library.addItem(null));
 	}
+	
 	@Test
 	public void shouldIssueItem(){
 		Item item = new Book("Ansi c","Samy");
@@ -65,7 +59,7 @@ public class LibraryTest extends UnitTest{
 		library.deleteItem(item);
 	}
 	
-	public void shouldGetBooklistWhichContainsBookTitle() {
+	public void shouldFindItemByTitle() {
 		Item item = new Book("c++","bala");
 		library.addItem(item);
 		assertEquals(2, library.getItemsByTitle("c").size());
@@ -84,5 +78,13 @@ public class LibraryTest extends UnitTest{
 	public void shouldReturnNullForFindItemByCreatorWithEmptyOrNullParameter(){
 		assertNull(library.findItemByCreator(""));
 		assertNull(library.findItemByCreator(null));
+	}
+
+	@Test
+	public void shouldDeleteAItem(){
+		Item item = new Book("Ansi c","Samy");
+		library.addItem(item);
+		library.deleteItem(item);
+		assertEquals(3, Item.findAll().size());
 	}
 }

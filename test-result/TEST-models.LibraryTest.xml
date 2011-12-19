@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="0" time="0.113" errors="0" skipped="0" tests="8" name="models.LibraryTest">
-  <testcase classname="models.LibraryTest" name="shouldDeleteAItem" time="0.086">
-      </testcase>
+<testsuite failures="0" time="0.05" errors="0" skipped="0" tests="8" name="models.LibraryTest">
   <testcase classname="models.LibraryTest" name="shouldCreateLibraryObject" time="0">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.007">
+  <testcase classname="models.LibraryTest" name="shouldAddItem" time="0.014">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldIssueItem" time="0.007">
+  <testcase classname="models.LibraryTest" name="shouldIssueItem" time="0.012">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldReturnItem" time="0.005">
+  <testcase classname="models.LibraryTest" name="shouldReturnItem" time="0.008">
       </testcase>
   <testcase classname="models.LibraryTest" name="shouldReserveABook" time="0.004">
       </testcase>
-  <testcase classname="models.LibraryTest" name="shouldFindItemByCreator" time="0.004">
+  <testcase classname="models.LibraryTest" name="shouldFindItemByCreator" time="0.008">
       </testcase>
   <testcase classname="models.LibraryTest" name="shouldReturnNullForFindItemByCreatorWithEmptyOrNullParameter" time="0">
+      </testcase>
+  <testcase classname="models.LibraryTest" name="shouldDeleteAItem" time="0.004">
       </testcase>
 </testsuite>
