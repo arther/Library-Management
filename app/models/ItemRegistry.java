@@ -40,7 +40,7 @@ public class ItemRegistry extends Model {
 		return ItemRegistry.find("item.creator",creator).fetch();
 	}
 	
-	public static List findByTitle(String creator){
-		return ItemRegistry.find("item.title",creator).fetch();
+	public static List findByTitle(String title){
+		return ItemRegistry.find("item.title",title).fetch();
 	}
 }
