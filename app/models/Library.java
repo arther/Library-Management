@@ -27,11 +27,11 @@ public class Library extends Model {
 	}
 
 	public List getItemsByTitle(String title) {
-		if (((title == null) || (title.isEmpty())))
+		if (title == null || title.isEmpty())
 			return null;
 		return ItemRegistry.findByTitle(title);
 	}
-
+	
 	public void issueItem(Item item) {
 		ItemRegistry itemRegistry = ItemRegistry.findById(item.getId());
 		if (!item.getIssuedStatus())
@@ -57,5 +57,10 @@ public class Library extends Model {
 			itemRegistry.setReservedStatus(true);
 		itemRegistry.save();
 	}
-
+	
+	public Item getItemById(String itemId){
+		if (((itemId == null) || (itemId.isEmpty())))
+			return null;
+		return(Item.findById(Long.parseLong(itemId)));
+	}
 }

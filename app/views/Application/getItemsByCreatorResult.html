@@ -1,0 +1,36 @@
+#{extends 'main.html'/}
+#{set title :'getItemsByTitleFromLibrary'/}
+
+#{ifnot list}
+No Books Found
+#{/ifnot}
+<table>
+<tr>
+	<td>
+	<table>
+		<tr>
+		<td>Item ID</td>
+		<td>Item Title</td>
+		<td>Item Creator</td>
+		<td>Issued ?</td>
+		<td>Reserved ?</td>
+		
+	</tr>
+	#{list items:list, as:'itemDetail'}
+	
+		<tr>
+			<td><input type="label" value="${itemDetail[0]}"></input></td>
+			<td><input type="label" value="${itemDetail[1]}"></input></td>
+			<td><input type="label" value="${itemDetail[2]}"></input></td>
+			<td><input type="label" value="${itemDetail[3]}"></input></td>
+			<td><input type="label" value="${itemDetail[4]}"></input></td>
+			
+		
+		</tr>
+				
+	 #{/list}
+	 </table>
+	 </td>
+	
+</table>
+

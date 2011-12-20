@@ -1,0 +1,10 @@
+#{extends 'main.html'/}
+#{set title :'addItem'/}
+
+<form method="post" action="@{Application.addItemToLibrary()}">
+	<input type="label" value="Enter the title :"/>
+	<input type="text" name="title"/>
+	<input type="label" value="Enter the author :"/>
+	<input type="text" name="creator"/>
+	<input type="submit" name="addItem" value="Add"/>
+</form>
